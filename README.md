@@ -25,7 +25,6 @@ The following outlines how to make updates for each of the different content cat
         "color": "blue",            // see "color" below for options
         "src": "..."                // the url of the background image
     },
-    ...
 }
 ```
 
@@ -63,7 +62,7 @@ https://img.youtube.com/vi/<video-id>/0.jpg
         "description": "...",       // the description to show below the video
         "uploaded": "Jan 1, 1990",  // the updload date for the video
         "category": "MyThriicents"  // the category for the video
-    }
+    },
 }
 ```
 
@@ -136,7 +135,7 @@ For `category`, be sure to include the *exact name* of an existing Category. Inv
     "text": "...",                  // the content of the quote
     "source": "...",                // the person to cite
     "videoId": "..."                // the YouTube video ID for the related video
-}
+},
 ```
 
 Words are stored in an array meaning that objects have no titles. Simply wrap the object in a `{}` without any prefix or key.
