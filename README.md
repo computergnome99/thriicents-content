@@ -8,7 +8,7 @@ The following outlines how to make updates for each of the different content cat
 
 ### Categories
 
-``` json
+``` jsonc
 {
     "Category Name": {
         "color": "blue",            // see "color" below for options
@@ -36,7 +36,7 @@ The `color` property can be one of the following:
 
 The `src` property is the exact URL of the background image for the category. To use the thumbnail of a YouTube video as the background, use the YouTube thumbnail URL format:
 
-```
+``` sh
 # replace <video-id> with the id of the desired video
 
 https://img.youtube.com/vi/<video-id>/0.jpg
@@ -44,7 +44,7 @@ https://img.youtube.com/vi/<video-id>/0.jpg
 
 ### Videos
 
-``` json
+``` jsonc
 {
     "Video Name": {
         "id": "...",                // the YouTube video ID
@@ -62,19 +62,19 @@ Videos uses "named-objects", meaning, the name of each object is the title of th
 
 The YouTube video ID for the video. You can get the YouTube video ID from the URL of the video:
 
-```
+``` sh
 https://www.youtube.com/watch?v=2YZy20-jjeI
-                                ^^^^^^^^^^^
+#                               ^^^^^^^^^^^
 ```
 
 The ID is the part of the URL directly following the `v=` URL variable.
 
 If the URL contains other variables, be sure not to include them:
 
-```
+``` sh
 https://www.youtube.com/watch?v=gjYbD1Gk96Y&list=PL0v3oDkZwh-9aVbFAQBreq6r2K3L514RN
-                                ^^^^^^^^^^^xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                only this  nothing after (or including) the "&"
+#                               ^^^^^^^^^^^xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#                               only this  nothing after (or including) the "&"
 ```
 
 #### `duration`
@@ -118,4 +118,27 @@ The `uploaded` property should be the date the video was uploaded. The value can
 
 For `category`, be sure to include the *exact name* of an existing Category. Invalid values here could cause issues. The selected category will determine where the video is housed on the website.
 
+### Word
+
+``` jsonc
+{
+    "text": "...",                  // the content of the quote
+    "source": "...",                // the person to cite
+    "videoId": "..."                // the YouTube video ID for the related video
+}
+```
+
+Words are stored in an array meaning that objects have no titles. Simply wrap the object in a `{}` without any prefix or key.
+
+#### `text`
+
+The text is the main body of the quote. No fancy formatting of Markdown is permitted here, just plain text.
+
+#### `source`
+
+The name of the person you are citing.
+
+#### `videoId` *(Optional)*
+
+This should just be the video ID for the video you want to link to this quote. Words with a `videoId` will show a link inside of them to the video in question. Videos that are linked to a quote will show that quote under the video. Multiple quotes can be linked to a single video.
 
