@@ -17,7 +17,7 @@ When contributing, there are a few key factors to consider.
 
 The following outlines how to make updates for each of the different content categories.
 
-### Categories
+### [Categories](./categories.json)
 
 ``` jsonc
 {
@@ -53,7 +53,7 @@ The `src` property is the exact URL of the background image for the category. To
 https://img.youtube.com/vi/<video-id>/0.jpg
 ```
 
-### Videos
+### [Videos](./videos.json)
 
 ``` jsonc
 {
@@ -129,7 +129,7 @@ The `uploaded` property should be the date the video was uploaded. The value can
 
 For `category`, be sure to include the *exact name* of an existing Category. Invalid values here could cause issues. The selected category will determine where the video is housed on the website.
 
-### Word
+### [Words](./words.json)
 
 ``` jsonc
 {
