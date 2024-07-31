@@ -4,6 +4,17 @@ This repository acts as a psuedo back-end for the Thriicents website. Updates to
 
 ## Guides for Updating
 
+When contributing, there are a few key factors to consider.
+
+1. All properties are required unless otherwise specified below.
+2. All content (including property names and keys) need to be wrapped in quotes (`"`). Single or double quotes are both valid.
+3. All content must be JSON encoded or it will cause issues. You can use a JSON encoder tool like [JSON formatter](https://jsonformatter.org/json-stringify-online) to encode text in a valid and safe way.
+4. Commas (`,`) are required between all sibling properties and objects. A safe rule of thumb is to just put a comma at the end of every line.
+5. An IDE like VS Code can really be helpful here since GitHub's own editor won't alert you to typos or syntax issues.
+
+> [!IMPORTANT]
+> Always check your work on the site after you make a change to ensure nothing broke.
+
 The following outlines how to make updates for each of the different content categories.
 
 ### Categories
